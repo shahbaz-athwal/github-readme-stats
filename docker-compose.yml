@@ -7,10 +7,10 @@ services:
       - PAT_1=your_github_pat # Add your github PAT here
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.nginx.rule=Host(`github-stats.shahcodes.in`)"
-      - "traefik.http.routers.nginx.entrypoints=websecure"
-      - "traefik.http.routers.nginx.tls=true"
-      - "traefik.http.routers.nginx.tls.certresolver=myresolver"
+      - "traefik.http.routers.github-readme-stats.rule=Host(`github-stats.shahcodes.in`)"
+      - "traefik.http.routers.github-readme-stats.entrypoints=websecure"
+      - "traefik.http.routers.github-readme-stats.tls=true"
+      - "traefik.http.routers.github-readme-stats.tls.certresolver=myresolver"
     networks:
       - traefik
     restart: always
