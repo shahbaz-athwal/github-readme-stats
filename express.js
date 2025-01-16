@@ -6,8 +6,12 @@ import wakatimeCard from "./api/wakatime.js";
 import gistCard from "./api/gist.js";
 import express from "express";
 
+const PORT = process.env.PORT ?? 9000;
+
 const app = express();
-app.listen(process.env.port || 9000);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 app.get("/", statsCard);
 app.get("/pin", repoCard);
