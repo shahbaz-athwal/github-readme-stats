@@ -1,7 +1,7 @@
 services:
   app:
     container_name: github-readme-stats
-    image: ghcr.io/shahbaz-athwal/github-readme-stats:latest 
+    image: ghcr.io/shahbaz-athwal/github-readme-stats:linux-amd64 
     environment:
       - PORT=5050
       - PAT_1=your_github_pat # Add your github PAT here
