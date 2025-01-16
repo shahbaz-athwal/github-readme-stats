@@ -1,0 +1,11 @@
+.git
+readme.md
+.prettierignore
+.prettierrc
+LICENSE
+.github
+node_modules
+*.md
+.env
+.vscode
+.idea 
