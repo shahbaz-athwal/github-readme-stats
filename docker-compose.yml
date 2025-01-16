@@ -1,0 +1,20 @@
+services:
+  app:
+    container_name: github-readme-stats
+    image: ghcr.io/shahbaz-athwal/github-readme-stats:latest 
+    environment:
+      - PORT=5050
+      - PAT_1=your_github_pat # Add your github PAT here
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nginx.rule=Host(`github-stats.shahcodes.in`)"
+      - "traefik.http.routers.nginx.entrypoints=websecure"
+      - "traefik.http.routers.nginx.tls=true"
+      - "traefik.http.routers.nginx.tls.certresolver=myresolver"
+    networks:
+      - traefik
+    restart: always
+
+networks:
+  traefik:
+    external: true
