@@ -7,5 +7,5 @@ RUN npm ci --only=production
 
 COPY . . 
 
-EXPOSE 5050
+EXPOSE 9000
 CMD ["node", "express.js"]

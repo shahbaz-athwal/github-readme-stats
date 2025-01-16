@@ -1,7 +1,7 @@
 .git
 readme.md
 .prettierignore
-.prettierrc
+.prettierrc.json
 LICENSE
 .github
 node_modules
